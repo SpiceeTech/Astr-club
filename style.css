@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-padding: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background: #fff;
+	min-height:200vh; /*adds a bottom space to the page*/
+}
+section{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding:100px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #fff;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+img{
+    width: 100%;
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 70px;
+	display: inline-block;
+	justify-content: center;
+	align-items: center;
+	transition: 0.6s;
+	z-index: 100000;
+}
+header .logo {
+	position: relative;
+	max-width: 80px;
+}
+header ul {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header ul li{
+	position: relative;
+	list-style: none;
+}
+header ul li a{
+	position: relative;
+	margin: 0 15px;
+	display: inline-block;
+	color: #000000; /*color of text on navbar when background is white*/
+	font-weight: 500;
+	margin-left: 20px; /*shifts the text on the navbar to the left*/
+	text-decoration: none;
+}
+
+header ul li a::after{
+	content: '';
+	width: 0;
+	height: 4px;
+	position: absolute;
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #df1204;
+	transition: width 0.3s;
+}
+header ul li a:hover::after{
+	width: 50%;
+}
+
+/* IMAGE ICONS ON THE NAV BAR */
+header .icon i
+{
+	color: #000;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-left: 3rem;
+}
+
+/* Responsive header menu*/
+header nav .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 320px;
+    width: 88%;
+    padding: 2em;
+    background-color:var(-- primary-color);
+    z-index:1000;	
+}
+header.sticky
+{
+	padding: 5px 100px;
+	background: #a30606; /*background color of navbar*/
+	border-bottom: 1px solid(0,0,0,1);
+}
+
+	/* COLOR OF NAV BAR IS WHITE */
+
+header.sticky ul li a
+{
+	color: #fff;
+} 
+.header .icon i
+{
+	font-size: 2rem;
+	margin-right: 2rem;
+	color: var(--white);
+	cursor: pointer;
+}
+header :where(nav, .left, .right, ul, .icon){
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header nav{
+	padding: 0.2em 0;
+	line-height: 1em; /* grey thickness on nav bar*/
+}
+header nav a{
+	padding: 0 0.8em;
+	
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #fff;
+    gap: 1rem;
+}
+.home-text span{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.home-text h2{
+    font-size: 3.2rem;
+    color: #a81505;
+    font-weight: bolder;
+}
+
+.home-text{
+    flex: 10 15 50rem;  /* CHANGES THE SIZE OF THE TEXT IN RESPECT TO THE ASTRONAUT IMAGE ON THE RIGHT*/
+}
+.home-img{
+    flex: 1 1 75rem;   /* CHANGES THE SIZE OF THE ASTRONAUT IMAGE*/
+}
+.home-img img{
+    animation: animate 7s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:  translate(-11px, 0);
+    }
+    50%{
+        transform: translate(-0px, -11px);
+    }
+    100%{
+        transform: translate(-11px, 0);
+    }
+}
+.container span 
+{
+	color: black;
+	text-transform: uppercase;
+	display: block;
+}
+
+.text2
+{
+	font-size: 25px;
+}
+@keyframes text{
+	0%{
+		color: white;
+		margin-bottom: -80px;
+	}
+	30%{
+		letter-spacing: 25px;
+		margin-bottom:-40px;
+	}
+	85%{
+		letter-spacing: 8px;
+		margin-bottom: -40px;
+	}
+}
+.logo{
+	padding: 5px 0;
+}
+.logo{
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.logo img{   
+    width: 40px;   /* width of the logo */
+}
+.content
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content .textBox
+{
+	position: relative;
+	max-width: 600px;
+}
+.content .textBox h2
+{
+	color: #021924;
+	font-size: 3.7em;
+	line-height: 1.4em;
+	font-weight:800;
+}
+.content .textBox h2 span
+{
+	color: #a30606;
+	font-size: 1.2em;
+	font-weight: 900;
+}
+.content .textBox p{
+	color: #000000;
+}
+.content .imgBox
+{
+	width: 600px;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 50px;
+	margin-top: 50px;
+}
+.content .imgBox img{
+	max-width: 430px;
+}
+/* NEW SECTION - SEPARATES THE STATIC ASTRO IMAGE WITH THE QUOTED TEXT */
+.sec1{
+	position: relative;
+	padding: 0px 180; /* section align*/
+}
+.sec1 p{
+	line-height: 32px; /*paragraph spacing*/
+}
+.sec1-inner{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+} 
+ .sec1 .text{
+	width: 48%;
+}
+.sec1 .text-left{
+	text-align: right;
+}
+.sec1 .text-right{
+	text-align: left;
+} 
+
+ /* FOOTER */
+
+.footer{
+    padding: 10px 0;
+    background-color: #a30606;; 
+ }
+.footer .social{
+     text-align: center;
+     padding-bottom: 1px;
+     color: black;
+ }
+.footer .social a{
+     font-size: 24px;
+     color: inherit;
+     border: 1px solid rgb(247, 237, 237);
+     width: 40px;
+     height: 40px;
+     line-height: 38px;
+     display: inline-block;
+     border-radius: 50%;
+     margin: 0 15px;
+     opacity: 0.75;
+ }
+ /* .footer .social a:hover{
+     opacity: 0.9;
+ } */
+ .footer .social a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+ .footer ul{
+     margin-top: 0;
+     padding: 0;
+     list-style: none;
+     font-size: 18px;
+     line-height: 1.6;
+     margin-bottom: 0;
+     text-align: center;
+ }
+ .footer ul li a{
+     color: inherit;
+     text-decoration: none;
+     opacity: 0.8;
+ }
+ .footer ul li{
+     display: inline-block;
+     padding: 0 15px;
+ }
+ .footer ul li a:hover{
+     opacity: 1;
+ }
+ .footer .copyright{
+     margin: 15px;
+     text-align: center;
+     font-size: 13;
+     color: black;
+ }
+
+ 

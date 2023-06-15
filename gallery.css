@@ -1,0 +1,138 @@
+.logo{
+	padding: 5px 0;
+}
+.logo{
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.logo img{   
+    width: 40px;   /* width of the logo */
+}
+.gallery-container {
+    width: 100%;
+    text-align: center;
+}
+.gallery-h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+.gallery-h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: rgb(4, 4, 77);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+.top-content{
+    background-color: #bebebe;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+.gallery-h3{
+    height: 100%;
+    background-color: rgb(115, 115, 117);
+    line-height: 60px;
+    padding: 0 50px;
+    color: white;
+}
+
+.headings-label{
+    display: inline-block;
+    height: 100%;
+    padding: 0 5px;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.headings-label:hover{
+    color: black;
+}
+
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 5px lightgray;
+    transition: opacity .5s;
+    cursor: pointer;
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.pic:hover{
+    opacity: 0.8;
+}
+
+#check1:checked ~ .gallery-container .photo-gallery .pic,
+#check2:checked ~ .gallery-container .photo-gallery .team,
+#check3:checked ~ .gallery-container .photo-gallery .mamkhize,
+#check4:checked ~ .gallery-container .photo-gallery .astrology
+{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+
+#check2:checked ~ .gallery-container .photo-gallery .mamkhize,
+#check2:checked ~ .gallery-container .photo-gallery .astrology{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+#check3:checked ~ .gallery-container .photo-gallery .team,
+#check3:checked ~ .gallery-container .photo-gallery .astrology{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+#check4:checked ~ .gallery-container .photo-gallery .mamkhize,
+#check4:checked ~ .gallery-container .photo-gallery .team{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+}
+
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
