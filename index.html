@@ -11,10 +11,15 @@
 	<!-- CSS FILE LINK -->
 	<link rel="stylesheet" href="style.css">
     
+    <!-- CSS FOOTER LINK -->
+    <link rel="stylesheet" href="footer.css">
 
      <!-- FONT AWESOME-->
     <link rel="stylesheet"
      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+     <!-- AOS ANIMATION LINK-->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
     <!-- LINK TO JAVASCRIPT -->
@@ -42,13 +47,23 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#">Quiz</a></li>
                 <li><a href="#">About Us</a></li>
+                <i class="fa fa-search" aria-hidden="true"></i>
+                </ul>
+                <!-- for mobile devices-->
+                <ul>
+                    <ul class="header__menu-mobile">
+                        <li>
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+
+                        </li>
+                    </ul>
                 </ul>
             </nav>
         </div>
         </div>
-			 
+        </div>
 		</nav>
-    </div>
+        
     
     <!-- SEARCH BAR -->
     
@@ -82,13 +97,13 @@
  <section class="sec1">
     <div class="container reveal">
         <div class="sec1-inner">
-            <div class="text text-left">
+            <div class="text text-left" data-aos="fade-up">
   
                 <img src="img/astro2.jpg" alt="astroimg">
                 
                 </div>
 
-                <div class="text text-right" >
+                <div class="text text-right"  data-aos="fade-up">
 
                    <p><i>"The atoms of out bodies are tracable
                     to stars that manufactured them in their 
@@ -112,6 +127,7 @@
     </div>
 </section>
 
+
   <!-- FOOTER -->
 
   <section class="footer">
@@ -124,16 +140,27 @@
     </div>
 
     <ul class="list">
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Terms</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Privacy Policy</a></li>
     </ul>
     <p class="copyright"> Astronomy Club @ 2023</p>
-
 </section>
 
+
+
 </main>
+
+<!-- AOS JAVASCRIPT LINK-->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2100,
+    once: true,
+  });
+</script>
+
     </body>
 </html>
