@@ -318,4 +318,21 @@ header nav a{
   }
   
 
+/* Signup form */
+form {
+	border: solid 1px grey;
+	border-radius: 5px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	padding: 50px;
+}
+
+input {
+	height: 40px;
+	width: 400px;
+	margin-bottom: 5px;
+}
+
  
