@@ -22,4 +22,15 @@ function imgSlider(anything){
   }); */
 
 
-
+  const showErrorButton = document.getElementById('subm');
+  const closeErrorButton = document.getElementById('closeErrorButton');
+  const errorPopup = document.getElementById('errorPopup');
+  
+  showErrorButton.addEventListener('click', () => {
+    errorPopup.style.display = 'flex';
+  });
+  
+  closeErrorButton.addEventListener('click', () => {
+    errorPopup.style.display = 'none';
+  });
+  

@@ -325,8 +325,9 @@ form {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 40%;
+	width: 60%;
 	padding: 50px;
+	text-align: center;
 }
 
 input {
@@ -334,5 +335,45 @@ input {
 	width: 400px;
 	margin-bottom: 5px;
 }
-
- 
+  
+  .popup {
+	width: 50%;
+	height: 80%;
+	background-color: rgb(255, 255, 255);
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .popup-content {
+	background-color: rgb(255, 255, 255);
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0px 0px 10px rgba(255, 8, 8, 0.2);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .close-button {
+	position:sticky;
+	top: 10px;
+	right: 15px;
+	font-size: 20px;
+	cursor: pointer;
+  }
+  
+  button {
+	padding: 10px 20px;
+	background-color: #2b00ff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	background-color: #0056b3;
+  }
+  
