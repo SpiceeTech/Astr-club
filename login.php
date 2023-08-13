@@ -40,12 +40,11 @@
                 </div>
                 </div>';
              }
-
             } 
         ?>
         <center><h1 style="margin-bottom: 20px;">Login</h1></center>
         <input type="text" placeholder="Enter your username..." name="username"> <br>
-        <input type="password" placeholder="Create your password..." name="pwd"> <br>
+        <input type="password" placeholder="Enter your password..." name="pwd"> <br>
         <input type="submit" value="Login" name="submit" id="subm">
         <p style="margin-top: 12px;">Don't have an account? <a href="signup.php">Sign up</a></p>
     </form>
