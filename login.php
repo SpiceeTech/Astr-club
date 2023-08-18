@@ -40,11 +40,27 @@
                 </div>
                 </div>';
              }
+             else if($_GET["error"] == "wrongloginpwd"){
+                echo '<div id="errorPopup" class="popup">
+                 <div class="popup-content">
+                     <span class="close-button" id="closeErrorButton">&times;</span>
+                     <h2 style="color:red">You entered a wrong password.</h2>
+                 </div>
+                 </div>';
+             }
+             else if($_GET["error"] == "wrongloginusername"){
+                echo '<div id="errorPopup" class="popup">
+                 <div class="popup-content">
+                     <span class="close-button" id="closeErrorButton">&times;</span>
+                     <h2 style="color:red">Username not found.</h2>
+                 </div>
+                 </div>';
+             }
             } 
         ?>
         <center><h1 style="margin-bottom: 20px;">Login</h1></center>
         <input type="text" placeholder="Enter your username..." name="username"> <br>
-        <input type="password" placeholder="Enter your password..." name="pwd"> <br>
+        <input type="password" placeholder="Enter your password..." name="pwdlogin"> <br>
         <input type="submit" value="Login" name="submit" id="subm">
         <p style="margin-top: 12px;">Don't have an account? <a href="signup.php">Sign up</a></p>
     </form>

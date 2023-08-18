@@ -51,7 +51,6 @@ function unameExist($conn, $uname){
         mysqli_stmt_close($stmt);
         $result = false;
     }
-
     return $result;
 }
 
@@ -63,4 +62,36 @@ function validPwd($pwd){
         }
     }
     return false;
+}
+
+function emptyInputLogin($uname, $pwd){
+    if(empty($uname) || empty($pwd)){
+        $result = true;
+    }else{
+        $result = false;
+    }
+
+    return $result;
+}
+
+function loginUser($conn, $uname, $pwdlogin){
+    $uidExists = unameExist($conn, $uname);
+
+    if ($uidExists === false){
+        header("location: ../login.php?error=wrongloginuname");
+        exit();
+    }
+
+    $pwdHashed = $uidExists["password"];
+
+    if (password_verify($pwdlogin, $pwdHashed)){
+        session_start();
+        $_SESSION["userid"] = $uidExists["u_id"];
+        $_SESSION["useruid"] = $uidExists["username"];
+        header("location: ../quiz/quizhome.php");
+        exit();
+    }else{
+        header("location: ../login.php?error=wrongloginpwd");
+        exit();
+    }
 }
