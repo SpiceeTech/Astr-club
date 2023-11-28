@@ -42,6 +42,7 @@
         }
 
         if ($isCool){
+
             // SQL query to insert data
             $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
@@ -53,8 +54,6 @@
             $stmt->close();
             $conn->close();
 
-            header("location: ../quiz/quizhome.php");
-            
         }
     }else{
         header("location: ../signup.php?error=stmterror");

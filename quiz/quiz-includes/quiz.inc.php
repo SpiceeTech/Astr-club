@@ -30,13 +30,16 @@
         // You can loop through $rows to access each row's data
         foreach ($rows as $row) {
             // Access fields using $row['field_name']
-            echo "Q: " . $row['question'] . "<br>";
-            echo "A. " . $row['option1'] . "<br>";
-            echo "B. " . $row['option2'] . "<br>";
-            echo "C. " . $row['option3'] . "<br>";
-            echo "D. " . $row['option4'] . "<br>";
+            echo "<h4>Q: " . $row['question'] . "</h4><br>";
+            echo "<label for='option1'>A. " . $row['option1'] . "</label>";
+            echo "<input type='radio' id='option1' name='radioGroup, value='A'><br>";
+            echo "<label for='option2'>B. " . $row['option2'] . "</label>";
+            echo "<input type='radio' id='option2' name='radioGroup, value='B'><br>";
+            echo "<label for='option3'>C. " . $row['option3'] . "</label>";
+            echo "<input type='radio' id='option3' name='radioGroup, value='C'><br>";
+            echo "<label for='option4'>D. " . $row['option4'] . "</label>";
+            echo "<input type='radio' id='option4' name='radioGroup, value='D'><br>";
         }
-
     }else if (isset($_GET['submitm'])){
         
     }else if (isset($_GET['submith'])){
